@@ -1,0 +1,125 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encryption Software</title>
+</head>
+<body>
+    <h1>Encryption Software</h1>
+
+    <h2>Caesar Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="caesar">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <input type="number" name="shift" placeholder="Enter shift for Caesar cipher">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Reverse Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="reverse">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Vigenère Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="vigenere">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <input type="text" name="key" placeholder="Enter key for Vigenère cipher">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Transposition Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="transposition">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <input type="text" name="key" placeholder="Enter key for Transposition cipher">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Atbash Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="atbash">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Affine Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="affine">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <input type="number" name="a" placeholder="Enter 'a' for Affine cipher">
+        <input type="number" name="b" placeholder="Enter 'b' for Affine cipher">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Simple Substitution Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="simple_substitution">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <input type="text" name="key" placeholder="Enter key for Simple Substitution cipher">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Rail Fence Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="rail_fence">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <input type="number" name="key" placeholder="Enter key for Rail Fence cipher">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>ROT13 Cipher</h2>
+    <form method="POST">
+        <input type="hidden" name="algorithm" value="rot13">
+        <select name="action">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <input type="text" name="text" placeholder="Enter text">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <!-- Add more forms as needed -->
+
+    {% if result %}
+    <h2>Result</h2>
+    <p>Algorithm: {{ algorithm }}</p>
+    <p>Output: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
